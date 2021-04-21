@@ -1,0 +1,55 @@
+@import 'colors';
+
+.btn {
+  color: $base-black;
+  min-width: 150px;
+  font-family: 'Oswald', sans-serif;
+  border: 2px solid $primary-green;
+  background-color: $base;
+  padding: 7px 7px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+  letter-spacing: 0;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  transition-delay: 0.2s !important;
+  box-shadow: 0 8px 7px -7px rgba(0, 0, 0, 0.3);
+
+  &.cancel {
+    border: 2px solid $primary-red;
+    &::after {
+      background: $primary-red;
+    }
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &:hover {
+    color: $base;
+    border-color: $base-black;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &::after {
+    background: $primary-green;
+    transition: width 0.5s ease-in-out;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    z-index: -1;
+  }
+}

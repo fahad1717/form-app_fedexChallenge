@@ -16,9 +16,32 @@ module.exports = function (config) {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, './coverage/form-app'),
+      dir: require('path').join(__dirname, './coverage'),
       reports: ['html', 'lcovonly', 'text-summary'],
-      fixWebpackSourcePaths: true
+      fixWebpackSourcePaths: true,
+      thresholds: {
+        emitWarning: false, // set to `false` to fail the test command when thresholds are not met
+        // thresholds for all files
+        global: {
+          statements: 100,
+          lines: 100,
+          branches: 100,
+          functions: 100
+        },
+        // thresholds per file
+        each: {
+          statements: 100,
+          lines: 100,
+          branches: 100,
+          functions: 100
+        }
+      },
+      verbose: true,
+      'report-config': {
+        html: {
+          subdir: 'html'
+        }
+      }
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
