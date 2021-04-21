@@ -1,7 +1,7 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { UserManagerService } from './user-manager.service';
-import { Validators, FormGroup, FormArray, FormControl, AbstractControl } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 
 describe('UserManagerService', () => {
   let service: UserManagerService;
