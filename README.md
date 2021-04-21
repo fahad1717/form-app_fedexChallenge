@@ -1,6 +1,6 @@
 # FormApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3. The project was developed as a code challenge exercise for Fedex Front-End developer job position.
 
 ## Development server
 
@@ -17,6 +17,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running unit tests with code coverage
+
+Run `ng test --code-coverage` to execute the unit tests via [Karma](https://karma-runner.github.io). Code coverage html file is generated within the coverage folder. The file's location path is form-app/coverage. Coverage threshold is 100% for the project.
 
 ## Running end-to-end tests
 
