@@ -24,7 +24,7 @@
 
         <mat-form-field appearance="standard">
           <mat-label>Password</mat-label>
-          <input id="password" matInput placeholder="Password" name="password" formControlName="password">
+          <input id="password" matInput placeholder="Password" name="password" type="password" formControlName="password">
         </mat-form-field>
         <small *ngIf="user.get('password').errors?.required && user.get('password').touched" class="alert">Password is required.</small>
         <small *ngIf="user.get('password').errors?.minlength && user.get('password').touched" class="alert">Password should have minimum 8 characters.</small>
@@ -34,7 +34,6 @@
 
       <div class="btn-container">
         <button class="btn" type="submit" [ngClass]="{'disabled': !userFormGroup.valid, '': userFormGroup.valid}">Submit</button>
-        <button class="btn cancel">Reset</button>
       </div>
     </div>
   </form>
